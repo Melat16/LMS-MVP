@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import Navbar from "../components/Navbar";
 const Container = styled.div`
 display: flex;
 justify-content: center;
@@ -10,10 +10,11 @@ color:red;
 
 export default function Home() {
   return (
-   
+   <>
+      <Navbar/>
         <Container>
         <H1>Home</H1>
         </Container>
-    
+        </>
   )
 }
