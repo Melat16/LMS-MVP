@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 const Container = styled.div`
 max-height:100px;
-background: rgba(20,20,50,0.2);
-justify-content: center;
+padding-left:3%;
+background: rgb(1,96,93);
 display: flex;
 `
 const Leftcontainer = styled.div`
 margin: 20px;
-margin-left: 50px;
+margin-left: 20px;
 float: left;
 `
 
@@ -17,19 +17,22 @@ margin: 20px;
 margin-left: 50%;
 float: right;
 `
-const H1 = styled.h1`
+const H2 = styled.h1`
 color: white;
+font-weight:lighter;
+word-spacing: 0.4em;
+
 
 `
 const Navbar = () => {
     return ( 
             <Container>
         <Leftcontainer>
-       <H1>WARKA</H1>
+       <H2>WARKA ACADEMY</H2>
         </Leftcontainer>
 
         <Rightcontainer>
-        <H1>Courses</H1>
+    
         </Rightcontainer>
             </Container>
      )

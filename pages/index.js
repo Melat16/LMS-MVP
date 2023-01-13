@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Child from "../public/child.png";
 
 
+
 const Container = styled.div`
 height: 100vh;
 width: 100vw;
@@ -21,7 +22,7 @@ const Left = styled.div`
 float:left;
 width: 50%;
 padding: 5%;
-margin-top:8%;
+margin-top:6%;
 `
 const H1 = styled.h1`
 color:black;
