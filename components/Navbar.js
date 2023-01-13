@@ -28,7 +28,7 @@ const Navbar = () => {
     return ( 
             <Container>
         <Leftcontainer>
-       <H2>WARKA ACADEMY</H2>
+       <H2>LUCY ACADEMY</H2>
         </Leftcontainer>
 
         <Rightcontainer>
