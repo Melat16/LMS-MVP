@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useState } from "react";
 
 const Container = styled.div`
 height: 100vh;
@@ -32,24 +33,46 @@ align-items:center;
 `
 
 const Accordion = styled.div`
+width:1000px;
 
 `
 const Item = styled.div`
-
+margin-buttom:5px;
+padding:10px 20px;
 `
 
 const Title = styled.div`
-
+color:red;
+display:flex;
+justify-content: space-between;
+align-items: center;
+cursor: pointer;
 `
 
-const H2 = styled.div`
-
+const H2 = styled.h1`
+font-size:26px;
 `
-
+const H5 = styled.h5`
+font-size:22px;
+font-weight:lighter;
+`
 const Content = styled.div`
 
 `
+
+const Span = styled.span`
+`
+
 const Who = () => {
+
+const [selected, setSelected] = useState(null)
+const toggle = (i) =>{
+    if (selected == i){
+
+        return setSelected(null)
+    }
+    setSelected(i)
+}
     return( 
 
         <Container>
@@ -64,12 +87,18 @@ const Who = () => {
             <Wrapper>
                 <Accordion>
 
-                    {data.map((item, i)=>{
-<Item>
-    
-</Item>
+                    {data.map((item, i)=>(
+    <Item>
+    <Title onClick={() => toggle(i)}>
+        <H2>{item.question}</H2>
+        <Span>{selected == i? '-' : '+'}</Span>
+    </Title>
+    <Content className={selected ==i? 'content show': 'content '}>
+        
+    </Content>
+    </Item>
 
-                    })}
+                    ))}
                 </Accordion>
             </Wrapper>
         </Container>
