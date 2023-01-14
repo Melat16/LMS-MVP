@@ -5,6 +5,7 @@ const Container = styled.div`
 height: 100vh;
 width: 100vw;
 background-color:white;
+
 `
 
 const Subcontainer = styled.div`
@@ -13,54 +14,88 @@ margin-left:auto;
 margin-right:auto;
 justify-content:center;
 text-align: center;
+
 `
+const Subcontainer1 = styled.div`
+width:1000px;
+margin-top:50px;
+margin-left:auto;
+margin-right:auto;
+justify-content:center;
+text-align: center;
+
+`
+
 const P = styled.p`
-color:black;
-font-size:24px;
-font-weight:300px;
+color: black;
+font-size: 22px;
+font-weight:lighter;
+margin-bottom: 2%;
+line-height:25px;
+word-spacing: 3px;
 `
 
 const H1 = styled.h1`
 color:rgb(1,96,93);
+padding-bottom:3%;
 `
 
 const Wrapper = styled.div`
 display:flex;
-height:100vh;
+height:300px;
 width:100vw;
 justify-content: center;
 align-items:center;
+
 `
 
 const Accordion = styled.div`
 width:1000px;
+margin-left:auto;
+margin-right:auto;
+justify-content:center;
+text-align: center;
 
 `
+
 const Item = styled.div`
-margin-buttom:5px;
-padding:10px 20px;
+margin-b0ttom:5px;
+padding-bottom:40px;
+background-color:rgb(255, 244, 238);
 `
 
 const Title = styled.div`
-color:red;
 display:flex;
+height:50px;
 justify-content: space-between;
 align-items: center;
+background-color:white;
 cursor: pointer;
+border-style:solid;
+border-width:0.5px;
+border-color:rgb(251,196,0);
 `
 
 const H2 = styled.h1`
-font-size:26px;
-`
-const H5 = styled.h5`
 font-size:22px;
+padding-left:20px;
+font-weight:light;
+`
+const H5 = styled.h6`
+font-size:20px;
 font-weight:lighter;
 `
+
 const Content = styled.div`
+height:auto;
+max-height:9999px;
+transition:all 0.5s cubic-bezier(0,1,0,1);
+background-color:rgb(255, 244, 238);
 
 `
 
 const Span = styled.span`
+padding-right:30px;
 `
 
 const Who = () => {
@@ -78,22 +113,30 @@ const toggle = (i) =>{
         <Container>
 
             <Subcontainer>
-<H1>Who are we</H1>
-                <P>we are icog-ACC we are pioneers in the children education sector with years
+                <H1>Who are we</H1>
+                <P>We are icog-ACC we are pioneers in the children education sector with years
                     of experience. And now we are launching an online e-learning platform 
                     for children and youth age of 8-18 to teach them essential computer programming skills and basic digital literacy.
                 </P>
             </Subcontainer>
+            <Subcontainer1>
+                <H1>Frequently Asked Questions</H1>
+            </Subcontainer1>
             <Wrapper>
+                
                 <Accordion>
+                
 
-                    {data.map((item, i)=>(
+ {data.map((item, i)=>(
     <Item>
+        
     <Title onClick={() => toggle(i)}>
         <H2>{item.question}</H2>
         <Span>{selected == i? '-' : '+'}</Span>
     </Title>
-    <Content className={selected ==i? 'content show': 'content '}>
+    <Content>
+        
+        {selected ==i?<H5>{item.answer}</H5> :'' }
         
     </Content>
     </Item>
