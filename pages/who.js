@@ -59,12 +59,13 @@ text-align: center;
 `
 
 const Item = styled.div`
-margin-b0ttom:5px;
+margin-bottom:5px;
 padding-bottom:40px;
 background-color:rgb(255, 244, 238);
 `
 
 const Title = styled.div`
+color: black;
 display:flex;
 height:50px;
 justify-content: space-between;
@@ -79,11 +80,13 @@ border-color:rgb(251,196,0);
 const H2 = styled.h1`
 font-size:22px;
 padding-left:20px;
-font-weight:light;
+font-weight: 300;
 `
-const H5 = styled.h6`
-font-size:20px;
-font-weight:lighter;
+const H5 = styled.p`
+font-size:19px;
+color:black;
+text-align: start;
+font-weight: lighter;
 `
 
 const Content = styled.div`
