@@ -30,6 +30,13 @@ font-weight: bold;
 word-spacing: 3px;
 margin-top:0px;
 `
+const H2 = styled.h1`
+color:rgba(1, 96, 93, 1);
+font-size:42px;
+font-weight: bold;
+word-spacing: 3px;
+margin-top:0px;
+`
 const P = styled.p`
 color: black;
 font-size: 22px;
@@ -63,7 +70,7 @@ export default function Home2() {
     />
     </Right>
     <Left>
-    <H1>BUILDING FUTURE GENERATIONS OF ENGINEERS</H1>
+    <H1>BUILDING FUTURE GENERATIONS OF<H2>ENGINEERS</H2></H1>
     <P>Inspiring children to reach their full potential by teaching 
       them <br/>the latest technologies in software development and digital literacy. <br/>Join us in the journey. </P>
     <Button>Get Started</Button>

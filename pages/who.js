@@ -30,14 +30,14 @@ const P = styled.p`
 color: black;
 font-size: 22px;
 font-weight:lighter;
-margin-bottom: 2%;
+margin-top:20px;
 line-height:25px;
 word-spacing: 3px;
 `
 
 const H1 = styled.h1`
 color:rgb(1,96,93);
-padding-bottom:3%;
+padding-bottom:1%;
 `
 
 const Wrapper = styled.div`
@@ -59,13 +59,12 @@ text-align: center;
 `
 
 const Item = styled.div`
-margin-bottom:5px;
+margin-b0ttom:5px;
 padding-bottom:40px;
 background-color:rgb(255, 244, 238);
 `
 
 const Title = styled.div`
-color: black;
 display:flex;
 height:50px;
 justify-content: space-between;
@@ -80,13 +79,11 @@ border-color:rgb(251,196,0);
 const H2 = styled.h1`
 font-size:22px;
 padding-left:20px;
-font-weight: 300;
+font-weight:light;
 `
-const H5 = styled.p`
-font-size:19px;
-color:black;
-text-align: start;
-font-weight: lighter;
+const H5 = styled.h6`
+font-size:20px;
+font-weight:lighter;
 `
 
 const Content = styled.div`
