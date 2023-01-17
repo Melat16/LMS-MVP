@@ -1,5 +1,55 @@
 import styled from "styled-components";
 
+const Card3 = () => {
+    return (  
+
+        <Container>
+  
+    <Box>
+      <Content>
+        
+        <H3 >Card 3</H3>
+         <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+           
+         </P>
+         
+                  <Button>Learn more</Button>
+                  
+      </Content>
+    </Box>
+
+    <Box>
+      <Content>
+        
+        <H3 >Card 3</H3>
+         <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+           
+         </P>
+         
+                  <Button>Learn more</Button>
+                  
+      </Content>
+    </Box>
+
+    <Box>
+      <Content>
+        
+        <H3 >Card 3</H3>
+         <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+           
+         </P>
+         
+                  <Button>Learn more</Button>
+                  
+      </Content>
+    </Box>
+ 
+  </Container>
+    );
+}
 const Container = styled.div` 
 margin: 0;
 padding: 0;
@@ -50,7 +100,7 @@ margin-left: 1%;
 margin-bottom: 3%;
 background:#F5F5F5;
 box-shadow: 0 5px 5px rgba(0,0,0,0.1);
-border-radius: 15px;
+border-radius: 7px;
 display: flex;
 align-items: center;
 &:hover {
@@ -80,56 +130,4 @@ transition: 0.5s;
 const H3 = styled.h3`
 
 `
-
-const Card2 = () => {
-    return (  
-
-        <Container>
-  
-    <Box>
-      <Content>
-        
-        <H3 >Card 2</H3>
-         <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-           
-         </P>
-         
-                  <Button>Learn more</Button>
-                  
-      </Content>
-    </Box>
-
-    <Box>
-      <Content>
-        
-        <H3 >Card 2</H3>
-         <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-           
-         </P>
-         
-                  <Button>Learn more</Button>
-                  
-      </Content>
-    </Box>
-
-    <Box>
-      <Content>
-        
-        <H3 >Card 2</H3>
-         <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-           
-         </P>
-         
-                  <Button>Learn more</Button>
-                  
-      </Content>
-    </Box>
- 
-  </Container>
-    );
-}
- 
-export default Card2;
+export default Card3;
