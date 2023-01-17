@@ -2,10 +2,29 @@ import styled from "styled-components";
 import Image from 'next/image';
 import Child from "../public/child.png";
 
+export default function Home2() {
+  return (
+    <Container>
+    <Right>
+    <Image
+      src={Child}
+      width={650}
+      height={550}
+      alt="Picture of the author"
+    />
+    </Right>
+    <Left>
+    <H1>BUILDING FUTURE GENERATIONS OF<H2>ENGINEERS</H2></H1>
+    <P>Inspiring children to reach their full potential by teaching 
+      them <br/>the latest technologies in software development and digital literacy. <br/>Join us in the journey. </P>
+    <Button>Get Started</Button>
+    </Left>
+   </Container>
 
-
+  )
+}
 const Container = styled.div`
-height: 100vh;
+height: 670px;
 width: 100vw;
 background-color:white;
 `
@@ -56,26 +75,3 @@ color: white;
 font-size: 22px;
 font-weight:bold;
 `
-
-
-export default function Home2() {
-  return (
-    <Container>
-    <Right>
-    <Image
-      src={Child}
-      width={650}
-      height={550}
-      alt="Picture of the author"
-    />
-    </Right>
-    <Left>
-    <H1>BUILDING FUTURE GENERATIONS OF<H2>ENGINEERS</H2></H1>
-    <P>Inspiring children to reach their full potential by teaching 
-      them <br/>the latest technologies in software development and digital literacy. <br/>Join us in the journey. </P>
-    <Button>Get Started</Button>
-    </Left>
-   </Container>
-
-  )
-}

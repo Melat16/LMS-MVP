@@ -1,42 +1,31 @@
-import Card from "../components/Cards";
-import Card2 from "../components/Cards2";
-import Card3 from "../components/Cards3";
+import Card from "../components/Card/Cards";
+import Card2 from "../components/Card/Cards2";
+import Card3 from "../components/Card/Cards3";
 import styled from "styled-components";
 import React, { useState } from 'react';
 
 const Courses = () => {
     const [active, setActive] = useState("Card");
-   
-
     return (
-      
-      
-      
-        
           <SectionOne>
+            <Title>
+            <H1>What We Provide</H1>
+            </Title>
             <ColumnOne1>
               <Transfers active={active}> 
-  
-              
+
              <BtnWrapper>
                <Button className = "card" onClick={() => setActive("Card")}>Grade 1-4</Button>
               </BtnWrapper>
   
-              
-              
-              
-              
               <BtnWrapper>
                <Button className = "card2" onClick={() => setActive("Card2")}>Grade 5-8</Button>
               </BtnWrapper>
               
-             
-             
               <BtnWrapper>
                <Button className = "card3" onClick={() => setActive("Card3")}>Grade 9-12</Button>
               </BtnWrapper>
               
-  
               </Transfers>
             
             </ColumnOne1>
@@ -50,9 +39,7 @@ const Courses = () => {
                
             </ColumnTwo1>
           </SectionOne> 
-       
-      
-      
+    
     );
   }
 
@@ -62,6 +49,7 @@ const Courses = () => {
     height: 40%;
     gap: 2rem;
     width: 100vw;
+    background-color:white;
   `;
   const ColumnOne1 = styled.div`
     display: flex;
@@ -75,7 +63,15 @@ const Courses = () => {
     height: 115%;
     width: 100%;
   `;
-  
+  const Title = styled.div`
+text-align:center;
+margin-bottom:10px;
+background-color:white;
+`;
+  const H1 = styled.h1`
+color:rgb(1,96,93);
+padding-bottom:1%;
+`;
   const Transfers = styled.div`
     display:flex;
     flex-direction:row;

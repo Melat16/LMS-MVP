@@ -1,5 +1,19 @@
 import styled from "styled-components";
 
+
+const Navbar = () => {
+    return ( 
+            <Container>
+        <Leftcontainer>
+       <H2>LUCY ACADEMY</H2>
+        </Leftcontainer>
+
+        <Rightcontainer>
+    
+        </Rightcontainer>
+            </Container>
+     )
+}
 const Container = styled.div`
 max-height:100px;
 padding-left:3%;
@@ -21,21 +35,5 @@ const H2 = styled.h1`
 color: white;
 font-weight:lighter;
 word-spacing: 0.4em;
-
-
 `
-const Navbar = () => {
-    return ( 
-            <Container>
-        <Leftcontainer>
-       <H2>LUCY ACADEMY</H2>
-        </Leftcontainer>
-
-        <Rightcontainer>
-    
-        </Rightcontainer>
-            </Container>
-     )
-}
- 
 export default Navbar;

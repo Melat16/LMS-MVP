@@ -1,8 +1,77 @@
 import styled from "styled-components";
 import { useState } from "react";
 
+
+const Who = () => {
+
+const [selected, setSelected] = useState(null)
+const toggle = (i) =>{
+    if (selected == i){
+
+        return setSelected(null)
+    }
+    setSelected(i)
+}
+    return( 
+
+        <Container>
+
+            <Subcontainer>
+                <H1>Who are we</H1>
+                <P>We are icog-ACC we are pioneers in the children education sector with years
+                    of experience. And now we are launching an online e-learning platform 
+                    for children and youth age of 8-18 to teach them essential computer programming skills and basic digital literacy.
+                </P>
+            </Subcontainer>
+            <Subcontainer1>
+                <H1>Frequently Asked Questions</H1>
+            </Subcontainer1>
+            <Wrapper>
+                
+                <Accordion>
+                
+
+ {data.map((item, i)=>(
+    <Item>
+        
+    <Title onClick={() => toggle(i)}>
+        <H2>{item.question}</H2>
+        <Span>{selected == i? '-' : '+'}</Span>
+    </Title>
+    <Content>
+        
+        {selected ==i?<H5>{item.answer}</H5> :'' }
+        
+    </Content>
+    </Item>
+
+                    ))}
+                </Accordion>
+            </Wrapper>
+        </Container>
+        
+     );
+}
+ 
+const data = [
+    {
+        question: "What is the best way to attend a course?",
+        answer:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ',
+    },
+    {
+        question: "What is the best way to attend a course?",
+        answer:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ',
+    },
+    {
+        question: "What is the best way to attend a course?",
+        answer:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ',
+    },
+]
 const Container = styled.div`
-height: 100vh;
+height: 580px;;
 width: 100vw;
 background-color:white;
 
@@ -97,73 +166,4 @@ background-color:rgb(255, 244, 238);
 const Span = styled.span`
 padding-right:30px;
 `
-
-const Who = () => {
-
-const [selected, setSelected] = useState(null)
-const toggle = (i) =>{
-    if (selected == i){
-
-        return setSelected(null)
-    }
-    setSelected(i)
-}
-    return( 
-
-        <Container>
-
-            <Subcontainer>
-                <H1>Who are we</H1>
-                <P>We are icog-ACC we are pioneers in the children education sector with years
-                    of experience. And now we are launching an online e-learning platform 
-                    for children and youth age of 8-18 to teach them essential computer programming skills and basic digital literacy.
-                </P>
-            </Subcontainer>
-            <Subcontainer1>
-                <H1>Frequently Asked Questions</H1>
-            </Subcontainer1>
-            <Wrapper>
-                
-                <Accordion>
-                
-
- {data.map((item, i)=>(
-    <Item>
-        
-    <Title onClick={() => toggle(i)}>
-        <H2>{item.question}</H2>
-        <Span>{selected == i? '-' : '+'}</Span>
-    </Title>
-    <Content>
-        
-        {selected ==i?<H5>{item.answer}</H5> :'' }
-        
-    </Content>
-    </Item>
-
-                    ))}
-                </Accordion>
-            </Wrapper>
-        </Container>
-        
-     );
-}
- 
-const data = [
-    {
-        question: "What is the best way to attend a course?",
-        answer:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ',
-    },
-    {
-        question: "What is the best way to attend a course?",
-        answer:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ',
-    },
-    {
-        question: "What is the best way to attend a course?",
-        answer:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ',
-    },
-]
 export default Who;
