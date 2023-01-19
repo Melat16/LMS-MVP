@@ -4,6 +4,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import styled from "styled-components";
+import expandIcon from "../public/expand.svg";
+import collapseIcon from "../public/collapse.svg";
 
 export default function PackageDetail({ packageName }) {
   const router = useRouter();
@@ -85,14 +87,14 @@ export default function PackageDetail({ packageName }) {
                 </div>
               </div>
               <div className="mt-5 flex justify-start items-end">
-                <p className="text-xl font-semibold mr-5 ">600 Birr/Course </p>
+                <p className="text-xl mr-5 ">600 Birr/Course </p>
                 <div className="">
-                  <Strikethrough className="text-xl mr-5">
+                  <Strikethrough className="text-xl mr-5 font-light">
                     1800 Birr
                   </Strikethrough>
                   <p className="text-xl font-semibold -mt-2">
                     {" "}
-                    1400 Birr/package
+                    1400 Birr/Package
                   </p>
                 </div>
               </div>
@@ -104,19 +106,29 @@ export default function PackageDetail({ packageName }) {
               <div key={i.toString()} className="mb-7 bg-[#FFF4EE]">
                 <div className="flex py-6 justify-between items-center cursor-pointer bg-white border-[0.5px] border-[#FBC400] ">
                   <h1 className="text-xl pl-5 font-light">{item.question}</h1>
-                  <div>
+                  <div className="flex items-center">
+                    <h1 className="text-xl mr-5 font-semibold">
+                      {item.price.toFixed(2).toString()} Birr
+                    </h1>
+
                     <span
                       className="px-4 py-2 mr-4 bg-[#01605D] rounded-md text-white"
                       onClick={() => addToCart(i)}
                     >
                       {selected.includes(i) ? "Remove" : "Add"}
                     </span>
-                    <span
-                      className="px-4 py-2 mr-4 bg-[#01605D] rounded-md text-white"
-                      onClick={() => toggle(i)}
-                    >
-                      {">"}
-                    </span>
+                    {expanded.includes(i) && (
+                      <CollapseIcon
+                        className="px-6 py-5 mr-4 bg-[#01605D] rounded-md text-white"
+                        onClick={() => toggle(i)}
+                      />
+                    )}
+                    {!expanded.includes(i) && (
+                      <ExpandIcon
+                        className="px-6 py-5  mr-4 bg-[#01605D] rounded-md text-white"
+                        onClick={() => toggle(i)}
+                      />
+                    )}
                   </div>
                 </div>
                 {expanded.includes(i) && (
@@ -143,9 +155,11 @@ export default function PackageDetail({ packageName }) {
               <p className="font-semibold text-lg">{`${total} Birr`}</p>
             )}
           </div>
-          <div className="px-8 py-3 rounded text-white bg-[#01605D] cursor-pointer hover:bg-[#01605D]/90">
+          <button
+            className={`px-8 py-3 rounded text-white bg-[#01605D] cursor-pointer hover:bg-[#01605D]/90`}
+          >
             Checkout
-          </div>
+          </button>
         </div>
       </div>
     </>
@@ -169,4 +183,18 @@ const Strikethrough = styled.span`
     -o-transform: rotate(-5deg);
     transform: rotate(-5deg);
   }
+`;
+
+const ExpandIcon = styled.span`
+  background-image: url(${expandIcon.src});
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+`;
+
+const CollapseIcon = styled.span`
+  background-image: url(${collapseIcon.src});
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
 `;
