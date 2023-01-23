@@ -89,6 +89,10 @@ const Input = styled.input`
   width: 500px;
   font-size: 14px;
   padding-left: 10px;
+  background:white;
+  border:solid;
+  border-width:0.9px;
+  border:color:rgb(1, 96, 93);
 
   ::placeholder {
     padding-left: 10px;
@@ -107,6 +111,10 @@ const TextArea = styled.textarea`
   font-size: 14px;
   width: 500px;
   padding: 10px;
+  background:white;
+  border:solid;
+  border-width:0.9px;
+  border:color:rgb(1, 96, 93);
   ::placeholder {
     padding-left: 10px;
   }
