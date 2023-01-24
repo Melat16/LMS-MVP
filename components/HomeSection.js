@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import Image from "next/image";
 import Child from "../public/child.png";
+import Link from "next/link";
 
 export default function Home2() {
+  
   return (
     <Container>
       <Right>
@@ -21,7 +23,9 @@ export default function Home2() {
           latest technologies in software development and digital literacy. Join
           us in the journey.{" "}
         </P>
-        <Button>Get Started</Button>
+        <Link href="#courses">
+          <Button>Start Free Trial</Button>
+        </Link>
       </Left>
     </Container>
   );
@@ -32,7 +36,6 @@ const Container = styled.div`
   background-color: white;
   padding-top: 100px;
 
-   
   @media screen and (min-width: 320px) and (max-width: 1080px) {
     display: flex;
     flex-direction: column;
@@ -58,9 +61,8 @@ const Left = styled.div`
   width: 50%;
   padding: 5%;
 
-   
   @media screen and (min-width: 320px) and (max-width: 1080px) {
-    width:100%;
+    width: 100%;
     flex-direction: column;
   }
 `;
@@ -70,7 +72,7 @@ const H1 = styled.h1`
   font-weight: bold;
   word-spacing: 3px;
   margin-top: 0px;
-   
+
   @media screen and (min-width: 320px) and (max-width: 1080px) {
     font-size: 36px;
     font-weight: bold;
@@ -110,8 +112,8 @@ const Button = styled.button`
   color: white;
   font-size: 22px;
   font-weight: bold;
-   
+
   @media screen and (min-width: 320px) and (max-width: 1080px) {
-    margin-left:70px;
+    margin-left: 70px;
   }
 `;
