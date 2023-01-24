@@ -31,6 +31,15 @@ const Container = styled.div`
   width: 100vw;
   background-color: white;
   padding-top: 100px;
+
+   
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0 0 0;
+    height: 570px;
+  }
 `;
 const Container2 = styled.div`
   margin-top: 3%;
@@ -38,12 +47,22 @@ const Container2 = styled.div`
 const Right = styled.div`
   float: right;
   width: 50%;
+
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    display: none;
+  }
 `;
 
 const Left = styled.div`
   float: left;
   width: 50%;
   padding: 5%;
+
+   
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    width:100%;
+    flex-direction: column;
+  }
 `;
 const H1 = styled.h1`
   color: black;
@@ -51,6 +70,11 @@ const H1 = styled.h1`
   font-weight: bold;
   word-spacing: 3px;
   margin-top: 0px;
+   
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    font-size: 36px;
+    font-weight: bold;
+  }
 `;
 const H2 = styled.h1`
   color: rgba(1, 96, 93, 1);
@@ -58,6 +82,11 @@ const H2 = styled.h1`
   font-weight: bold;
   word-spacing: 3px;
   margin-top: 0px;
+
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    font-size: 36px;
+    font-weight: bold;
+  }
 `;
 const P = styled.p`
   color: black;
@@ -67,6 +96,10 @@ const P = styled.p`
   margin-bottom: 2%;
   line-height: 25px;
   word-spacing: 3px;
+
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    font-size: 19px;
+  }
 `;
 const Button = styled.button`
   border: none;
@@ -77,4 +110,8 @@ const Button = styled.button`
   color: white;
   font-size: 22px;
   font-weight: bold;
+   
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    margin-left:70px;
+  }
 `;

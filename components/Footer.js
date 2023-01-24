@@ -52,6 +52,12 @@ const Container = styled.div`
   background-color: white;
   width: 100vw;
   margin-bottom: 0px;
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top:40px;
+  }
 `;
 const Title = styled.div`
   text-align: center;
@@ -65,23 +71,43 @@ const SubCont = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 const Right = styled.div`
   float: right;
-  width: 50%;
   padding: 5%;
   margin-top: -5%;
+
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top:5px;
+  }
 `;
 
 const Left = styled.div`
   float: left;
-  width: 50%;
   padding: 5%;
+
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding:0px;
+    float:none;
+  }
 `;
 const Form = styled.form`
   display: block;
   margin-left: 30px;
+  
 `;
 const Input = styled.input`
   margin-bottom: 15px;
@@ -96,6 +122,12 @@ const Input = styled.input`
 
   ::placeholder {
     padding-left: 10px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+  height: 40px;
+  width: 320px;
+  padding:5px;
   }
 `;
 
@@ -115,9 +147,15 @@ const TextArea = styled.textarea`
   border:solid;
   border-width:0.9px;
   border:color:rgb(1, 96, 93);
+
   ::placeholder {
     padding-left: 10px;
   }
+
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    padding:5px;
+    width: 320px;
+    }
 `;
 const P = styled.p`
   text-align: start;
@@ -130,6 +168,11 @@ const H1 = styled.h1`
   color: rgb(1, 96, 93);
   font-size: 30px;
   font-weight: bold;
+
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    font-size: 26px;
+
+  }
 `;
 
 export default Footer;

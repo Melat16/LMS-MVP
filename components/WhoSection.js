@@ -65,6 +65,13 @@ const Container = styled.div`
   height: 580px;
   width: 100vw;
   background-color: white;
+
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+  }
 `;
 
 const Subcontainer = styled.div`
@@ -73,6 +80,14 @@ const Subcontainer = styled.div`
   margin-right: auto;
   justify-content: center;
   text-align: center;
+
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left:5px;
+    padding-right:5px;
+  }
 `;
 const Subcontainer1 = styled.div`
   margin-top: 50px;
@@ -80,6 +95,7 @@ const Subcontainer1 = styled.div`
   margin-right: auto;
   justify-content: center;
   text-align: center;
+  background:red;
 `;
 
 const P = styled.p`
@@ -89,6 +105,9 @@ const P = styled.p`
   margin-top: 20px;
   line-height: 25px;
   word-spacing: 3px;
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    font-size: 19px;
+  }
 `;
 
 const H1 = styled.h1`
@@ -104,6 +123,11 @@ const Wrapper = styled.div`
   width: 100vw;
   justify-content: center;
   align-items: center;
+  
+
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+   padding:10px;
+  }
 `;
 
 const Accordion = styled.div`
@@ -112,6 +136,8 @@ const Accordion = styled.div`
   margin-right: auto;
   justify-content: center;
   text-align: center;
+  background:red;
+ 
 `;
 
 const Item = styled.div`
@@ -131,12 +157,16 @@ const Title = styled.div`
   border-width: 0.5px;
   border-color: rgb(251, 196, 0);
   color: rgb(1, 96, 93);
+
 `;
 
 const H2 = styled.h1`
   font-size: 22px;
   padding-left: 20px;
   font-weight: light;
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    font-size: 19px;
+  }
 `;
 const H5 = styled.h6`
   font-size: 15px;
