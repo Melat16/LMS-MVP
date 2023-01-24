@@ -95,7 +95,6 @@ const Subcontainer1 = styled.div`
   margin-right: auto;
   justify-content: center;
   text-align: center;
-  background:red;
 `;
 
 const P = styled.p`
@@ -136,7 +135,6 @@ const Accordion = styled.div`
   margin-right: auto;
   justify-content: center;
   text-align: center;
-  background:red;
  
 `;
 
