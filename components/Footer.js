@@ -65,8 +65,6 @@ const Title = styled.div`
 `;
 const SubCont = styled.div`
   background-image: url(${img.src});
-  background-size: contain;
-  background-position: right;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -118,7 +116,7 @@ const Input = styled.input`
   background:white;
   border:solid;
   border-width:0.9px;
-  border:color:rgb(1, 96, 93);
+  border-color:rgb(1, 96, 93);
 
   ::placeholder {
     padding-left: 10px;
@@ -146,7 +144,7 @@ const TextArea = styled.textarea`
   background:white;
   border:solid;
   border-width:0.9px;
-  border:color:rgb(1, 96, 93);
+  border-color:rgb(1, 96, 93);
 
   ::placeholder {
     padding-left: 10px;
