@@ -21,7 +21,7 @@ const Who = () => {
         </P>
       </Subcontainer>
       <Subcontainer1>
-        <H1>Frequently Asked Questions</H1>
+        <H1>FAQ</H1>
       </Subcontainer1>
       <Wrapper>
         <Accordion>
@@ -62,7 +62,7 @@ const data = [
   },
 ];
 const Container = styled.div`
-  height: 580px;
+  height:inherit;
   width: 100vw;
   background-color: white;
 
@@ -70,6 +70,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
+    height:inherit;
     
   }
 `;
@@ -118,14 +119,13 @@ const H1 = styled.h1`
 
 const Wrapper = styled.div`
   display: flex;
-  height: 300px;
+  height:inherit;
   width: 100vw;
   justify-content: center;
   align-items: center;
-  
 
   @media screen and (min-width: 320px) and (max-width: 1080px) {
-   padding:10px;
+    height:inherit;
   }
 `;
 
@@ -135,13 +135,15 @@ const Accordion = styled.div`
   margin-right: auto;
   justify-content: center;
   text-align: center;
- 
+  height:inherit;
+  
 `;
 
 const Item = styled.div`
   margin-bottom: 25px;
   /* padding-bottom: 40px; */
   background-color: rgb(255, 244, 238);
+
 `;
 
 const Title = styled.div`
