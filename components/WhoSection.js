@@ -21,7 +21,7 @@ const Who = () => {
         </P>
       </Subcontainer>
       <Subcontainer1>
-        <H1>Frequently Asked Questions</H1>
+        <H1>FAQ</H1>
       </Subcontainer1>
       <Wrapper>
         <Accordion>
@@ -62,9 +62,17 @@ const data = [
   },
 ];
 const Container = styled.div`
-  height: 580px;
+  height:inherit;
   width: 100vw;
   background-color: white;
+
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:inherit;
+    
+  }
 `;
 
 const Subcontainer = styled.div`
@@ -73,6 +81,14 @@ const Subcontainer = styled.div`
   margin-right: auto;
   justify-content: center;
   text-align: center;
+
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left:5px;
+    padding-right:5px;
+  }
 `;
 const Subcontainer1 = styled.div`
   margin-top: 50px;
@@ -89,6 +105,9 @@ const P = styled.p`
   margin-top: 20px;
   line-height: 25px;
   word-spacing: 3px;
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    font-size: 19px;
+  }
 `;
 
 const H1 = styled.h1`
@@ -100,10 +119,14 @@ const H1 = styled.h1`
 
 const Wrapper = styled.div`
   display: flex;
-  height: 300px;
+  height:inherit;
   width: 100vw;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    height:inherit;
+  }
 `;
 
 const Accordion = styled.div`
@@ -112,12 +135,15 @@ const Accordion = styled.div`
   margin-right: auto;
   justify-content: center;
   text-align: center;
+  height:inherit;
+  
 `;
 
 const Item = styled.div`
   margin-bottom: 25px;
   /* padding-bottom: 40px; */
   background-color: rgb(255, 244, 238);
+
 `;
 
 const Title = styled.div`
@@ -131,12 +157,16 @@ const Title = styled.div`
   border-width: 0.5px;
   border-color: rgb(251, 196, 0);
   color: rgb(1, 96, 93);
+
 `;
 
 const H2 = styled.h1`
   font-size: 22px;
   padding-left: 20px;
   font-weight: light;
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    font-size: 19px;
+  }
 `;
 const H5 = styled.h6`
   font-size: 15px;

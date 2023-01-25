@@ -55,6 +55,12 @@ const ColumnOne1 = styled.div`
   justify-content: center ;
   gap: 3rem;
   margin: 0;
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    display: flex;
+    
+    
+  }
+  
 `;
 
 const ColumnTwo1 = styled.div`
@@ -89,6 +95,12 @@ const Transfers = styled.div`
   border-bottom: 5px solid rgba(58, 135, 190, 0.3);
   padding-bottom: 20px;
   position: relative;
+
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    display: flex;
+    gap:10px;
+    width: 100%;
+  }
 `;
 
 const BtnWrapper = styled.div`
@@ -121,6 +133,12 @@ const Button = styled.button`
     border: 2px solid rgba(1, 96, 93, 0.5);
     background: rgba(255, 255, 255, 0.7);
     color: rgba(0, 113, 117, 1);
+  }
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    width: 100px; 
+    justify-content:center;
+    text-align:center;
+    padding: 10px 2px;
   }
 `;
 export default Courses;

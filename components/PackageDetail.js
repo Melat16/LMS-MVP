@@ -58,7 +58,7 @@ export default function PackageDetail({ packageName }) {
     <>
       <div className="flex flex-col justify-between pb-24">
         <div className="flex-col items-start mx-10">
-          <div className="grid grid-cols-2 gap-10 h-72">
+          <div className="grid md:grid-cols-2 md:gap-10 grid-cols-1 gap-5 ">
             <div className="flex items-center ">
               <Image
                 src="/scratch-og.png"
