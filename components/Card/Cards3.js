@@ -58,6 +58,11 @@ const Container = styled.div`
   word-spacing: 1.8px;
   line-height: 22px;
   flex-wrap: wrap;
+
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 const Button = styled.button`
   color: rgb(255, 123, 0);
